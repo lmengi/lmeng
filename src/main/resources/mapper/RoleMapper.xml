@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lmeng.mapper.RoleMapper">
+  <resultMap id="BaseResultMap" type="com.lmeng.pojo.Role">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="roleId" jdbcType="INTEGER" property="roleid" />
+    <result column="roleName" jdbcType="VARCHAR" property="rolename" />
+    <result column="superAdminFlag" jdbcType="INTEGER" property="superadminflag" />
+    <result column="publicFlag" jdbcType="INTEGER" property="publicflag" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="createUser" jdbcType="VARCHAR" property="createuser" />
+    <result column="menus" jdbcType="VARCHAR" property="menus" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="lastUpdateUser" jdbcType="VARCHAR" property="lastupdateuser" />
+    <result column="lastUpdateTime" jdbcType="TIMESTAMP" property="lastupdatetime" />
+  </resultMap>
+</mapper>

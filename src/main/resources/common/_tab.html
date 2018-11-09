@@ -1,0 +1,74 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="nav-close"><i class="fa fa-times-circle"></i>
+    </div>
+    <div class="sidebar-collapse">
+        <ul class="nav" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <span><img alt="image" class="img-circle"
+                               @if(isEmpty(avatar)){
+                               src="${ctxPath}/static/img/girl.gif"
+                               @}else{
+                               src="${ctxPath}/kaptcha/${avatar}"
+                               @}
+                               width="64px" height="64px"/></span>
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <span class="clear">
+                       <span class="block m-t-xs"><strong class="font-bold">${shiro.getUser().userName}</strong></span>
+                        <span class="text-muted text-xs block">${shiro.getUser().roleName}<b class="caret"></b></span>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu m-t-xs">
+                        <li><a class="J_menuItem" href="${ctxPath}/mgr/user_info">个人资料</a></li>
+                        <li><a class="J_menuItem" href="${ctxPath}/mgr/user_chpwd">修改密码</a></li>
+                        <li class="divider"></li>
+                        <li><a href="${ctxPath}/logout">安全退出</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logo-element">LM
+                </div>
+            </li>
+        </ul>
+
+        @for(menu in menus){
+        @if(tool.isEmpty(menu.children)){
+        <li>
+            <a class="J_menuItem" href="${ctxPath}${menu.url}" name="tabMenuItem">
+                <i class="fa ${menu.icon}"></i>
+                <span class="nav-label">${menu.name}</span>
+            </a>
+        </li>
+        @}else{
+        <li>
+            <a href="#">
+                <i class="fa ${menu.icon}"></i>
+                <span class="nav-label">${menu.name}</span>
+                <span class="fa arrow"></span>
+            </a>
+            <ul class="nav nav-second-level">
+                @for(subMenu in menu.children){
+                @if(tool.isEmpty(subMenu.children)){
+                <li>
+                    <a class="J_menuItem" href="${ctxPath}${subMenu.url}" name="tabMenuItem">${subMenu.name}</a>
+                </li>
+                @}else{
+                <li>
+                    <a href="#">${subMenu.name} <span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        @for(thirdMenu in subMenu.children){
+                        <li>
+                            <a class="J_menuItem" href="${ctxPath}${thirdMenu.url}" name="tabMenuItem">${thirdMenu.name}</a>
+                        </li>
+                        @}
+                    </ul>
+                </li>
+                @}
+                @}
+            </ul>
+        </li>
+        @}
+        @}
+
+    </div>
+</nav>

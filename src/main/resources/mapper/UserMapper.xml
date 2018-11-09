@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lmeng.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="com.lmeng.pojo.User">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="userId" jdbcType="INTEGER" property="userid" />
+    <result column="nickName" jdbcType="VARCHAR" property="nickname" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="signature" jdbcType="VARCHAR" property="signature" />
+    <result column="salt" jdbcType="CHAR" property="salt" />
+    <result column="loginId" jdbcType="VARCHAR" property="loginid" />
+    <result column="openId" jdbcType="VARCHAR" property="openid" />
+    <result column="gtClientId" jdbcType="VARCHAR" property="gtclientid" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="partMobile" jdbcType="VARCHAR" property="partmobile" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="statusId" jdbcType="INTEGER" property="statusid" />
+    <result column="identified" jdbcType="INTEGER" property="identified" />
+    <result column="senderStatusId" jdbcType="INTEGER" property="senderstatusid" />
+    <result column="gender" jdbcType="INTEGER" property="gender" />
+    <result column="headFileName" jdbcType="VARCHAR" property="headfilename" />
+    <result column="headSaveName" jdbcType="VARCHAR" property="headsavename" />
+    <result column="birth" jdbcType="TIMESTAMP" property="birth" />
+    <result column="longitude" jdbcType="DECIMAL" property="longitude" />
+    <result column="latitude" jdbcType="DECIMAL" property="latitude" />
+    <result column="lastCityId" jdbcType="INTEGER" property="lastcityid" />
+    <result column="lastBiotopeId" jdbcType="INTEGER" property="lastbiotopeid" />
+    <result column="lastBranch" jdbcType="VARCHAR" property="lastbranch" />
+    <result column="lastVersionCode" jdbcType="INTEGER" property="lastversioncode" />
+    <result column="lastVersionName" jdbcType="VARCHAR" property="lastversionname" />
+    <result column="lastLoginTime" jdbcType="TIMESTAMP" property="lastlogintime" />
+    <result column="registerTime" jdbcType="TIMESTAMP" property="registertime" />
+    <result column="registerIp" jdbcType="VARCHAR" property="registerip" />
+    <result column="lastUpdateTime" jdbcType="TIMESTAMP" property="lastupdatetime" />
+    <result column="useableMoney" jdbcType="DECIMAL" property="useablemoney" />
+    <result column="totalMoney" jdbcType="DECIMAL" property="totalmoney" />
+    <result column="frozenMoney" jdbcType="DECIMAL" property="frozenmoney" />
+    <result column="payPassword" jdbcType="VARCHAR" property="paypassword" />
+  </resultMap>
+</mapper>

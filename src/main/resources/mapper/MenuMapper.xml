@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lmeng.mapper.MenuMapper">
+  <resultMap id="BaseResultMap" type="com.lmeng.pojo.Menu">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="menuId" jdbcType="INTEGER" property="menuid" />
+    <result column="menuname" jdbcType="VARCHAR" property="menuname" />
+    <result column="menulink" jdbcType="VARCHAR" property="menulink" />
+    <result column="parentId" jdbcType="INTEGER" property="parentid" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="message" jdbcType="VARCHAR" property="message" />
+    <result column="statusId" jdbcType="INTEGER" property="statusid" />
+  </resultMap>
+</mapper>
